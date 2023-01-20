@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no.ks.fiks.politisk.behandling.v1/moeteplan.hent.resultat.schema.json",
+  "title": "ResultatMoeteplan",
+  "definitions": {
+    "Utvalg": {
+      "type": "object",
+      "properties": {
+        "utvalgId": {
+          "type": "string"
+        },
+        "utvalgNavn": {
+          "type": "string"
+        },
+        "moete": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Moete"
+          }
+        }
+      },
+      "required": [
+        "utvalgId",
+        "utvalgNavn"
+      ]
+    },
+    "Moete": {
+      "type": "object",
+      "properties": {
+        "moeteid": {
+          "type": "string"
+        },
+        "moetedato": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "tittel": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "moeteid"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "utvalg": {
+      "description": "Utvalg",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Utvalg"
+      }
+    }
+  }
+}
