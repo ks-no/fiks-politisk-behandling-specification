@@ -1,0 +1,16 @@
+@startuml
+participant Fagsystem as "Fagsystem"
+participant Møtesystem as "Møtesystem"
+
+Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalg.hent
+Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalg.hent.resultat
+
+note left of Fagsystem
+Dette viser meldingsutveksling
+ved "Hent utvalg".
+**Merk:** diagram er forenklet uten
+Fiks-Protokoll som meldingskø
+mellom Fagsystem og Møtesystem 
+end note
+
+@enduml

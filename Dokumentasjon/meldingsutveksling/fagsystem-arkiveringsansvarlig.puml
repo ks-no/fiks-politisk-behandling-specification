@@ -1,0 +1,23 @@
+@startuml
+participant Fagsystem as "Fagsystem"
+queue FiksIO as "Fiks-protokoller"
+participant PolitiskBehandling as "Møtesystem"
+participant FiksArkiv as "Fiks-Arkiv system"
+
+
+Fagsystem -> FiksIO : Send melding
+PolitiskBehandling <- FiksIO : Lytter og henter melding
+PolitiskBehandling -> FiksIO : Send svar-melding
+Fagsystem <- FiksIO : Lytter og henter svar-melding
+Fagsystem -> FiksIO : Send arkiver-melding
+FiksArkiv <- FiksIO : Lytter og henter arkiver-melding
+FiksArkiv -> FiksIO : Sender svar på arkiver-melding
+Fagsystem -> FiksIO : Lytter og henter svar på arkiver-melding
+
+note left of Fagsystem
+Dette viser flyt hvor 
+Fagsystem har ansvar for
+arkivering
+end note
+
+@enduml
