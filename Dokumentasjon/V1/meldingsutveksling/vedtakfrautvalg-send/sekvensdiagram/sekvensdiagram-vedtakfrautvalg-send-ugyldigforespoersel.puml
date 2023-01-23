@@ -1,0 +1,18 @@
+@startuml
+participant Møtesystem as "Møtesystem"
+participant Fagsystem as "Fagsystem"
+
+Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send
+Møtesystem <- Fagsystem : no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel
+
+note left of Fagsystem
+Feilmelding **ugyldigforespoersel**:
+Dette viser meldingsutveksling ved
+"send vedtak fra utvalg" hvor meldingen
+som kommer fra fagsystem er ugyldig.
+**Merk:** diagram er forenklet uten
+Fiks-Protokoll som meldingskø
+mellom Fagsystem og Møtesystem
+end note
+
+@enduml

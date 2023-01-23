@@ -2,13 +2,13 @@
 participant Fagsystem as "Fagsystem"
 participant Møtesystem as "Møtesystem"
 
-Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalg.hent
+Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send
 Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil
 
 note left of Fagsystem
 Feilmelding **serverfeil**:
 Dette viser meldingsutveksling ved
-"send delegertvedtak" hvor møtesystem
+"e-innsyn send utvalgssaker" hvor møtesystem
 feiler og ikke kan levere et svar.
 **Merk:** diagram er forenklet uten
 Fiks-Protokoll som meldingskø

@@ -2,8 +2,9 @@
 
 *Under arbeid*
 
-Json schemas for protokollen Fiks Politisk Behandling
+Json schemas og dokumentasjon for protokollen Fiks Politisk Behandling.
 
-Arbeid med standarden gjøres her.
+Videre arbeid med denne protokollen/standarden gjøres her. 
 
-Dette repositoriet skal brukes for å generere modeller og pakker (nuget, maven osv).
+Schemas vil bli inkludert i pakker med genererte models basert på schemas i andre prosjekt for f.eks. .net og java. 
+

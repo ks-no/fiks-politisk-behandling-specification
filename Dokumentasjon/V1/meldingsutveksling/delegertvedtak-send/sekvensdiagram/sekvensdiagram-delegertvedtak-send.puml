@@ -8,8 +8,8 @@ Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.mottatt
 note left of Fagsystem
 Dette viser meldingsutveksling
 ved "Send delegert vedtak" hvor 
-mottat melding skal sendes tilbake.
-Mottatt melding har ikke payload.
+mottat-melding skal sendes tilbake.
+Mottatt-melding har ikke payload.
 **Merk:** diagram er forenklet uten
 Fiks-Protokoll som meldingskø
 mellom Fagsystem og Møtesystem
