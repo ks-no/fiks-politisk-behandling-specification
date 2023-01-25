@@ -3,11 +3,11 @@ participant Møtesystem as "Møtesystem"
 participant Fagsystem as "Fagsystem"
 participant Arkivsystem as "Fiks-Arkiv arkivsystem"
 
+Møtesystem -> Arkivsystem : Arkiver vedtak fra utvalg
 Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send
 Møtesystem <- Fagsystem : no.ks.fiks.politisk.behandling.v1.mottatt
-Møtesystem -> Arkivsystem : Arkiver vedtak fra utvalg
 
-note left of Fagsystem
+note left of Møtesystem
 Dette viser meldingsutveksling
 ved "Send vedtak fra utvalg" hvor 
 mottat-melding skal sendes tilbake.

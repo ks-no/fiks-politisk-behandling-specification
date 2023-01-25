@@ -1,7 +1,9 @@
 @startuml
 participant Fagsystem as "Fagsystem"
 participant Møtesystem as "Møtesystem"
+participant Arkivsystem as "Fiks-Arkiv arkivsystem"
 
+Fagsystem -> Arkivsystem : Arkiver delegert vedtak
 Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.delegertvedtak.send
 Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil
 

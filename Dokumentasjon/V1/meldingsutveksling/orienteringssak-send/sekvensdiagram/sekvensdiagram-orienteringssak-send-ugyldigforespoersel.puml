@@ -1,7 +1,9 @@
 @startuml
 participant Fagsystem as "Fagsystem"
 participant Møtesystem as "Møtesystem"
+participant Arkivsystem as "Fiks-Arkiv arkivsystem"
 
+Fagsystem -> Arkivsystem : Arkiver orienteringssak
 Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.orienteringssak.send
 Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel
 

@@ -1,11 +1,11 @@
 @startuml
-participant Fagsystem as "Fagsystem"
 participant Møtesystem as "Møtesystem"
+participant EInnsyn as "E-Innsyn"
 
-Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send
-Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.mottatt
+Møtesystem -> EInnsyn : no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send
+Møtesystem <- EInnsyn : no.ks.fiks.politisk.behandling.v1.mottatt
 
-note left of Fagsystem
+note left of Møtesystem
 Dette viser meldingsutveksling
 ved "e-innsyn send vedtak" hvor 
 mottat-melding skal sendes tilbake.

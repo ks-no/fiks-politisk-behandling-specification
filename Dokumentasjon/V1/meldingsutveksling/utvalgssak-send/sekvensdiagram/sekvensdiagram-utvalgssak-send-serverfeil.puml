@@ -1,9 +1,11 @@
 @startuml
-participant Møtesystem as "Møtesystem"
 participant Fagsystem as "Fagsystem"
+participant Møtesystem as "Møtesystem"
+participant Arkivsystem as "Fiks-Arkiv arkivsystem"
 
-Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.hent
-Møtesystem <- Fagsystem : no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil
+Fagsystem -> Arkivsystem : Arkiver utvalgssak
+Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.send
+Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil
 
 note left of Fagsystem
 Feilmelding **serverfeil**:

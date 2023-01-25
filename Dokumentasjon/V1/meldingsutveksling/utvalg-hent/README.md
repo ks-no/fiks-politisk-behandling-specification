@@ -1,5 +1,7 @@
 ## Hent utvalg
 
+Hent utvalg skal **ikke** bruke `ikkefunnet` feilmeldingen. Hvis det ikke er noe utvalg skal det returneres et tomt resultat.
+
 ### Klassediagram
 *Merk at denne kan være litt utdatert*
 
@@ -7,11 +9,8 @@
 
 
 ### Sekvensdiagram
-#### Hent utvalg ok med resultat melding i retur:
+#### Hent utvalg ok med resultat-melding i retur:
 ![sekvensdiagram](sekvensdiagram/sekvensdiagram-utvalg-hent.png)
-
-#### Hent utvalg feiler med ikke funnet i retur:
-![sekvensdiagram](sekvensdiagram/sekvensdiagram-utvalg-hent-ikkefunnet.png)
 
 #### Hent utvalg feiler med ugyldigforespørsel i retur:
 ![sekvensdiagram](sekvensdiagram/sekvensdiagram-utvalg-hent-ugyldigforespoersel.png)

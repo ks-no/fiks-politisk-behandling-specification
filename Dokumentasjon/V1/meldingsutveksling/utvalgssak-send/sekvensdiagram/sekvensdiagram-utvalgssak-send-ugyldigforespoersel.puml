@@ -1,11 +1,13 @@
 @startuml
 participant Møtesystem as "Møtesystem"
 participant Fagsystem as "Fagsystem"
+participant Arkivsystem as "Fiks-Arkiv arkivsystem"
 
-Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.send
-Møtesystem <- Fagsystem : no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel
+Fagsystem -> Arkivsystem : Arkiver utvalgssak
+Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.send
+Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel
 
-note left of Fagsystem
+note left of Møtesystem
 Feilmelding **ugyldigforespoersel**:
 Dette viser meldingsutveksling ved
 "send utvalgssak" hvor meldingen

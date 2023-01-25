@@ -1,11 +1,11 @@
 @startuml
-participant Fagsystem as "Fagsystem"
 participant Møtesystem as "Møtesystem"
+participant EInnsyn as "E-Innsyn"
 
-Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send
-Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel
+Møtesystem -> EInnsyn : no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send
+Møtesystem <- EInnsyn : no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel
 
-note left of Fagsystem
+note left of Møtesystem
 Feilmelding **ugyldigforespoersel**:
 Dette viser meldingsutveksling ved
 "e-innsyn send utvalgssaker" hvor meldingen

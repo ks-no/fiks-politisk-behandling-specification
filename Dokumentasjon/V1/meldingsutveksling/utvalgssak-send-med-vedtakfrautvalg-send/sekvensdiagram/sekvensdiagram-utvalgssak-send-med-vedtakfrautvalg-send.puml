@@ -3,14 +3,18 @@ participant Fagsystem as "Fagsystem"
 participant Møtesystem as "Møtesystem"
 participant Arkivsystem as "Fiks-Arkiv arkivsystem"
 
-Fagsystem -> Arkivsystem : Arkiver orienteringssak
-Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.orienteringssak.send
+Fagsystem -> Arkivsystem : Arkiver utvalgssak
+Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.send
 Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.mottatt
+Møtesystem -> Arkivsystem : Arkiver vedtak fra utvalg
+Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send
+Møtesystem <- Fagsystem : no.ks.fiks.politisk.behandling.v1.mottatt
 
 note left of Fagsystem
 Dette viser meldingsutveksling
-ved "Send orienteringssak" hvor 
-mottat-melding skal sendes tilbake.
+ved "Send utvalgssak" hvor 
+"Møtesystem" senere sender 
+"vedtak fra utvalg" tilbake.
 Mottatt-melding har ikke payload.
 **Merk:** diagram er forenklet uten
 Fiks-Protokoll som meldingskø
