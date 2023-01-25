@@ -18,6 +18,8 @@ Vi ønsker å skrive de om til PlantUML slik at de lettere kan oppdateres underv
 
 ## [Send vedtak fra utvalg](vedtakfrautvalg-send)
 
+## [Send utvalgssak sammen med send vedtak fra utvalg](utvalgssak-send-med-vedtakfrautvalg-send)
+
 ## [Hent møteplan](møteplan-hent)
 
 ## [Hent utvalg](utvalg-hent)
