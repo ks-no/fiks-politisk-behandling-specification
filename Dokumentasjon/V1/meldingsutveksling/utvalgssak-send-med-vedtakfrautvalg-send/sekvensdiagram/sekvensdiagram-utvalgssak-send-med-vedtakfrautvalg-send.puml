@@ -4,27 +4,48 @@ title "Send utvalgssak sammen med send vedtak fra utvalg"
 
 participant Fagsystem as "Fagsystem"
 participant Møtesystem as "Møtesystem"
-participant Arkivsystem as "Fiks-Arkiv arkivsystem"
+participant Arkivsystem as "Fagsystem arkivsystem"
+participant Arkivsystem2 as "Møtesystem arkivsystem"
 
-Fagsystem -> Arkivsystem : Arkiver utvalgssak
+Fagsystem -> Arkivsystem : Fagsystem arkiverer utvalgssak
+
+...møtesystem oppretter sak? ...
+
 Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.send
 Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.mottatt
 
-...Utvalget har utarbeidet et vedtak...
+Møtesystem -> Møtesystem : Utvalgssekretær lager sak
+...Møter og behandlingsplan blir laget...
+...Hele behandlingsplan blir alltid sendt (ikke arkiveres)...
 
-Møtesystem -> Arkivsystem : Arkiver vedtak fra utvalg
+Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.behandlingsplan.send
+
+...Utvalg(ene) har gjort en oppdatering på saksframlegg...
+
+Møtesystem -> Arkivsystem2 : Møtesystem arkiverer saksframlegg fra utvalg
+Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.saksframlegg.send
+Fagsystem -> Arkivsystem : Arkiver saksframlegg fra utvalg
+
+
+...Utvalg(ene) har gjort en oppdatering på behandlingsplan (ikke arkiveres)...
+
+Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.behandlingsplan.send
+
+...1 av utvalgene har en ferdig innstilling...
+
+Møtesystem -> Arkivsystem2 : Møtesystem arkiverer 1 vedtak fra utvalg
+Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send
+Fagsystem -> Arkivsystem : Fagsystem arkiverer 1 vedtak fra utvalg
+
+
+...Utvalg(ene) har utarbeidet et ferdig vedtak (flagg for endelig)...
+
+Møtesystem -> Arkivsystem2 : Møtesystem arkiverer endelig vedtak fra utvalg
 Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send
 Møtesystem <- Fagsystem : no.ks.fiks.politisk.behandling.v1.mottatt
 
 note left of Fagsystem
-Dette viser meldingsutveksling
-ved "Send utvalgssak" hvor 
-"Møtesystem" senere sender 
-"vedtak fra utvalg" tilbake.
-Mottatt-meldinger har ikke payload.
-**Merk:** diagram er forenklet uten
-Fiks-Protokoll som meldingskø
-mellom Fagsystem og Møtesystem
+Kommer
 end note
 
 @enduml
