@@ -4,7 +4,7 @@
 
 **Ordbok**:
 
-Saksframlegg =   
+*kommer* 
 
 ### Sekvensdiagram
 #### Send utvalgssak fra Fagsystem og send vedtak fra utvalg fra Møtesystem
