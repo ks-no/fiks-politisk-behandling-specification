@@ -1,9 +1,21 @@
 @startuml
-title "Send utvalgssak sammen med send vedtak fra utvalg"
+skinparam sequenceMessageAlign center 
 
-participant Arkivsystem as "Felles arkivsystem"
-participant Fagsystem as "Fagsystem"
-participant Møtesystem as "Møtesystem"
+title "Send utvalgssak sammen med send vedtak fra utvalg\nFelles arkivsystem"
+
+participant Arkivsystem [
+    =Arkivsystem
+    ----
+    Felles arkivsystem
+]
+
+participant Fagsystem [
+    =Fagsystem
+]
+
+participant Møtesystem [
+    =Møtesystem
+    ]
 
 Fagsystem -> Arkivsystem : Fagsystem arkiverer utvalgssak
 

@@ -28,3 +28,12 @@ Viser mulig meldingsflyt mellom Fagsystem og Møtesystem hvor de har **felles** 
 Dette er et forslag hvor det er introdusert noen ny meldingstyper for sending av `behandlingsplan` og `saksframlegg` men man ikke bruker oppdatering av `saksframlegg`
 
 ![sekvensdiagram](sekvensdiagram/sekvensdiagram-utvalgssak-felles-arkivsystem-uten-endring-av-saksframlegg.png)
+
+### Send utvalgssak hvor fagsystem har internt arkivsystem
+
+Viser mulig meldingsflyt mellom Fagsystem og Møtesystem hvor fagsystemet har eget internt arkivsystemn
+
+Dette er et forslag hvor det er introdusert noen ny meldingstyper for sending av `behandlingsplan` og `saksframlegg` men man ikke bruker oppdatering av `saksframlegg`
+
+![sekvensdiagram](sekvensdiagram/sekvensdiagram-utvalgssak-fagsystem-med-internt-arkivsystem.png)
+

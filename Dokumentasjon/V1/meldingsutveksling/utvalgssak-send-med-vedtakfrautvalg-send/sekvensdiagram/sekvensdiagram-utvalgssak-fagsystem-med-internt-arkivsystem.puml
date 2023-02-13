@@ -1,13 +1,18 @@
 @startuml
-skinparam sequenceMessageAlign center 
+skinparam sequenceMessageAlign center
 
-title "Send utvalgssak sammen med send vedtak fra utvalg\nFelles arkivsystem og ingen endringer av saksframlegg"
+title "Send utvalgssak sammen med send vedtak fra utvalg\nFagsystem med internt arkivystem"
 
-participant Arkivsystem as "Felles arkivsystem"
-participant Fagsystem as "Fagsystem"
-participant Møtesystem as "Møtesystem"
+participant Fagsystem [
+    = Fagsystem
+    ----
+    ""Med internt arkivsystem""
+]
+participant Møtesystem [
+    = Møtesystem
+]
 
-Fagsystem -> Arkivsystem : Fagsystem arkiverer utvalgssak
+Fagsystem -> Fagsystem : Fagsystem arkiverer utvalgssak
 
 ...møtesystem oppretter sak? ...
 
@@ -20,17 +25,27 @@ Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.mottatt
 Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.behandlingsplan.send
 Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.mottatt
 
+
+...Utvalg(ene) har gjort en oppdatering på saksframlegg...
+
+Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.saksframlegg.send
+Fagsystem -> Fagsystem : Arkiver saksframlegg fra utvalg
+Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.saksframlegg.send.kvittering
+
+
 ...Utvalg(ene) har gjort en oppdatering på behandlingsplan (ikke arkiveres)...
 
 Fagsystem <- Møtesystem : no.ks.fiks.politisk.behandling.v1.utvalgssak.behandlingsplan.send
 Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.mottatt
 
 
+
+
 ...1 av utvalgene har en ferdig innstilling...
 
 
 Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send
-Fagsystem -> Arkivsystem : Fagsystem arkiverer 1 vedtak fra utvalg
+Fagsystem -> Fagsystem : Fagsystem arkiverer 1 vedtak fra utvalg
 Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send.kvittering
 
 
@@ -38,14 +53,12 @@ Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.sen
 
 
 Møtesystem -> Fagsystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send
-Fagsystem -> Arkivsystem : Fagsystem arkiverer endelig vedtak fra utvalg
+Fagsystem -> Fagsystem : Fagsystem arkiverer endelig vedtak fra utvalg
 Fagsystem -> Møtesystem : no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send.kvittering
 
 note right of Fagsystem
 Diagrammet viser mulig meldingsflyt
-der hvor det er felles arkivsystem og
-møtesystem ikke sender endringer av
-saksframlegg tilbake til fagsystem
+der hvor fagsystem har internt arkivsystem
 end note
 
 @enduml

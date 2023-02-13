@@ -1,11 +1,30 @@
 @startuml
-title "Send utvalgssak sammen med send vedtak fra utvalg"
+skinparam sequenceMessageAlign center 
+skinparam BoxPadding 10
+skinparam ParticipantPadding 10
 
+title "Send utvalgssak sammen med send vedtak fra utvalg\n2 arkivsystem"
 
-participant Arkivsystem as "Fagsystem arkivsystem"
-participant Fagsystem as "Fagsystem"
-participant Møtesystem as "Møtesystem"
-participant Arkivsystem2 as "Møtesystem arkivsystem"
+box "Fagsystem" #LightBlue
+participant Arkivsystem [
+    = Arkivsystem
+    ----
+    Fagsystemets arkivsystem
+    ]
+participant Fagsystem [ 
+    = Fagsystem
+    ]
+end box
+box "Møtesystem" #LightBlue
+participant Møtesystem [
+    = Møtesystem
+    ]
+participant Arkivsystem2 [
+    = Arkivsystem
+    ----
+    Møtesystemets arkivsystem
+    ]
+end box
 
 Fagsystem -> Arkivsystem : Fagsystem arkiverer utvalgssak
 
