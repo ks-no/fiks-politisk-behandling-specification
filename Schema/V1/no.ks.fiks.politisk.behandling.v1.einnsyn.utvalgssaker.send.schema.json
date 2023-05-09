@@ -1,40 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://no.ks.fiks.politisk.behandling.v1.einnsyn/utvalgssaker.send.schema.json",
+  "$id": "no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send.schema.json",
   "title": "SendUtvalgssakerEinnsyn",
   "definitions": {
     "Utvalgssakeinnsyn": {
       "type": "object",
       "properties": {
         "referanseEksternNoekkel": {
-          "type": "object",
-          "properties": {
-            "fagsystem": {
-              "type": "string"
-            },
-            "noekkel": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "fagsystem",
-            "noekkel"
-          ]
+          "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
         },
         "utvalgetsSaksnummer": {
-          "type": "object",
-          "properties": {
-            "saksaar": {
-              "type": "integer"
-            },
-            "sakssekvensnummer": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "saksaar",
-            "sakssekvensnummer"
-          ]
+          "$ref": "no.ks.fiks.politisk.behandling.v1.felles.saksnummer.schema.json"
         },
         "tittel": {
           "type": "string"

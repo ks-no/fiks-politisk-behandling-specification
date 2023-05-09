@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://no.ks.fiks.politisk.behandling.v1/vedtakFraUtvalg.send.schema.json",
+    "$id": "no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send.schema.json",
     "title": "SendVedtakFraUtvalg",
     "definitions": {
         "Votering": {

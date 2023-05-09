@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://no.ks.fiks.politisk.behandling.v1/orienteringssak.send.schema.json",
+    "$id": "no.ks.fiks.politisk.behandling.v1.orienteringssak.send.schema.json",
     "title": "SendOrienteringssak",
     "definitions": {
         "Behandlingsplan": {
@@ -35,19 +35,7 @@
             "type": "object",
             "properties": {
                 "referanseEksternNoekkel": {
-                    "type": "object",
-                    "properties": {
-                        "fagsystem": {
-                            "type": "string"
-                        },
-                        "noekkel": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "fagsystem",
-                        "noekkel"
-                    ]
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "fagsystemetsSaksnummer": {
                     "type": "object",
@@ -63,6 +51,9 @@
                         "saksaar",
                         "sakssekvensnummer"
                     ]
+                },
+                "fagsystemetsReferanseEksternNoekkel": {
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "tittel": {
                     "type": "string"
@@ -112,15 +103,7 @@
                     "type": "object"
                 },
                 "referanseForelderMappeEksternNoekkel": {
-                    "type": "object",
-                    "properties": {
-                        "fagsystem": {
-                            "type": "string"
-                        },
-                        "noekkel": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "referanseForelderMappe": {
                     "type": "string"
@@ -137,15 +120,7 @@
                     }
                 },
                 "referanseRegistreringEksternNoekkel": {
-                    "type": "object",
-                    "properties": {
-                        "fagsystem": {
-                            "type": "string"
-                        },
-                        "noekkel": {
-                            "type": "string"
-                        }
-                    }
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "referanseRegistrering": {
                     "type": "string"
