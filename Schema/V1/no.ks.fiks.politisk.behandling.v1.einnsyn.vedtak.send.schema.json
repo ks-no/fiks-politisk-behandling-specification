@@ -7,49 +7,13 @@
       "type": "object",
       "properties": {
         "referanseEksternNoekkel": {
-          "type": "object",
-          "properties": {
-            "fagsystem": {
-              "type": "string"
-            },
-            "noekkel": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "fagsystem",
-            "noekkel"
-          ]
+          "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
         },
         "utvalgetsSaksnummer": {
-          "type": "object",
-          "properties": {
-            "saksaar": {
-              "type": "integer"
-            },
-            "sakssekvensnummer": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "saksaar",
-            "sakssekvensnummer"
-          ]
+          "$ref": "no.ks.fiks.politisk.behandling.v1.felles.saksnummer.schema.json"
         },
         "arkivetsSaksnummer": {
-          "type": "object",
-          "properties": {
-            "saksaar": {
-              "type": "integer"
-            },
-            "sakssekvensnummer": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "saksaar",
-            "sakssekvensnummer"
-          ]
+          "$ref": "no.ks.fiks.politisk.behandling.v1.felles.saksnummer.schema.json"
         },
         "tittel": {
           "type": "string"
@@ -70,41 +34,10 @@
           }
         },
         "vedtak": {
-          "type": "object",
-          "properties": {
-            "tekstInnhold": {
-              "type": "string"
-            },
-            "tekstFormat": {
-              "type": "object",
-              "properties": {
-                "kodeverdi": {
-                  "type": "string"
-                },
-                "kodebeskrivelse": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+          "$ref": "no.ks.fiks.politisk.behandling.v1.felles.vedtak.schema.json"
         },
         "skjerming": {
-          "type": "object",
-          "properties": {
-            "skjermingshjemmel": {
-              "type": "string"
-            },
-            "skjermingsvarighet": {
-              "type": "integer"
-            },
-            "skjermingOpphoererDato": {
-              "type": "string",
-              "format": "date"
-            }
-          },
-          "required": [
-            "skjermingshjemmel"
-          ]
+          "$ref": "no.ks.fiks.politisk.behandling.v1.felles.skjerming.schema.json"
         },
         "saksansvarlig": {
           "type": "string"
@@ -126,24 +59,6 @@
         "tittel",
         "vedtaksdato",
         "saksansvarlig"
-      ]
-    },
-    "Moete": {
-      "type": "object",
-      "properties": {
-        "moeteid": {
-          "type": "string"
-        },
-        "moetedato": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "tittel": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "moeteid"
       ]
     },
     "Utvalgsmedlem": {
@@ -224,22 +139,7 @@
   "type": "object",
   "properties": {
     "moete": {
-      "type": "object",
-      "properties": {
-        "moeteid": {
-          "type": "string"
-        },
-        "moetedato": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "tittel": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "moeteid"
-      ]
+      "$ref": "no.ks.fiks.politisk.behandling.v1.felles.moete.schema.json"
     },
     "utvalg": {
       "type": "object",
@@ -253,7 +153,7 @@
         "moete": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Moete"
+            "$ref": "no.ks.fiks.politisk.behandling.v1.felles.moete.schema.json"
           }
         },
         "medlem": {

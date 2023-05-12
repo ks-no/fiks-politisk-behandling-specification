@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.politisk.behandling.v1.felles.skjerming.schema.json",
+    "title": "Skjerming",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "skjermingshjemmel": {
+            "type": "string"
+        },
+        "skjermingsvarighet": {
+            "type": "integer"
+        },
+        "skjermingOpphoererDato": {
+            "type": "string",
+            "format": "date"
+        }
+    },
+    "required": [
+        "skjermingshjemmel"
+    ]
+}
