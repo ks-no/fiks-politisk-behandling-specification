@@ -14,9 +14,21 @@
         "skjermingOpphoererDato": {
             "type": "string",
             "format": "date"
+        },
+        "tilgangsrestriksjon": {
+            "type": "object",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            }
         }
     },
     "required": [
-        "skjermingshjemmel"
+        "skjermingshjemmel",
+        "tilgangsrestriksjon"
     ]
 }
