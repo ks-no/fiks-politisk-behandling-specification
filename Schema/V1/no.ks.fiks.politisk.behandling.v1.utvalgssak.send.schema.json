@@ -47,26 +47,10 @@
                     "type": "string"
                 },
                 "saksbeskrivelse": {
-                    "type": "object",
-                    "properties": {
-                        "tekstInnhold": {
-                            "type": "string"
-                        },
-                        "tekstFormat": {
-                            "type": "object",
-                            "properties": {
-                                "kodeverdi": {
-                                    "type": "string"
-                                },
-                                "kodebeskrivelse": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.beskrivelse.schema.json"
                 },
                 "forslagTilVedtak": {
-                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.vedtak.schema.json"
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.beskrivelse.schema.json"
                 },
                 "skjerming": {
                     "$ref": "no.ks.fiks.politisk.behandling.v1.felles.skjerming.schema.json"

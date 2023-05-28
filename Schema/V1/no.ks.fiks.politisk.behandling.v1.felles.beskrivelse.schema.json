@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "no.ks.fiks.politisk.behandling.v1.felles.vedtak.schema.json",
-    "title": "Vedtak",
+    "$id": "no.ks.fiks.politisk.behandling.v1.felles.beskrivelse.schema.json",
+    "title": "Beskrivelse",
     "definitions": {},
     "type": "object",
     "properties": {
