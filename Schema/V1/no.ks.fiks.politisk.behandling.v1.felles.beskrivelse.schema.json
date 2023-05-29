@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.politisk.behandling.v1.felles.beskrivelse.schema.json",
+    "title": "Beskrivelse",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "tekstInnhold": {
+            "type": "string"
+        },
+        "tekstFormat": {
+            "type": "object",
+            "properties": {
+                "kodeverdi": {
+                    "type": "string"
+                },
+                "kodebeskrivelse": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

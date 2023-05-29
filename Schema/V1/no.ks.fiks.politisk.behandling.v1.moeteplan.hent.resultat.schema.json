@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://no.ks.fiks.politisk.behandling.v1/moeteplan.hent.resultat.schema.json",
+  "$id": "no.ks.fiks.politisk.behandling.v1.moeteplan.hent.resultat.schema.json",
   "title": "ResultatMoeteplan",
   "definitions": {
     "Utvalg": {
@@ -15,31 +15,13 @@
         "moete": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Moete"
+            "$ref": "no.ks.fiks.politisk.behandling.v1.felles.moete.schema.json"
           }
         }
       },
       "required": [
         "utvalgId",
         "utvalgNavn"
-      ]
-    },
-    "Moete": {
-      "type": "object",
-      "properties": {
-        "moeteid": {
-          "type": "string"
-        },
-        "moetedato": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "tittel": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "moeteid"
       ]
     }
   },

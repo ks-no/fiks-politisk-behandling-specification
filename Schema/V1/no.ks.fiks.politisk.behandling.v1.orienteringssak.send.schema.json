@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://no.ks.fiks.politisk.behandling.v1/orienteringssak.send.schema.json",
+    "$id": "no.ks.fiks.politisk.behandling.v1.orienteringssak.send.schema.json",
     "title": "SendOrienteringssak",
     "definitions": {
         "Behandlingsplan": {
@@ -35,34 +35,13 @@
             "type": "object",
             "properties": {
                 "referanseEksternNoekkel": {
-                    "type": "object",
-                    "properties": {
-                        "fagsystem": {
-                            "type": "string"
-                        },
-                        "noekkel": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "fagsystem",
-                        "noekkel"
-                    ]
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "fagsystemetsSaksnummer": {
-                    "type": "object",
-                    "properties": {
-                        "saksaar": {
-                            "type": "integer"
-                        },
-                        "sakssekvensnummer": {
-                            "type": "integer"
-                        }
-                    },
-                    "required": [
-                        "saksaar",
-                        "sakssekvensnummer"
-                    ]
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.saksnummer.schema.json"
+                },
+                "fagsystemetsReferanseEksternNoekkel": {
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "tittel": {
                     "type": "string"
@@ -87,22 +66,7 @@
                     }
                 },
                 "skjerming": {
-                    "type": "object",
-                    "properties": {
-                        "skjermingshjemmel": {
-                            "type": "string"
-                        },
-                        "skjermingsvarighet": {
-                            "type": "integer"
-                        },
-                        "skjermingOpphoererDato": {
-                            "type": "string",
-                            "format": "date"
-                        }
-                    },
-                    "required": [
-                        "skjermingshjemmel"
-                    ]
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.skjerming.schema.json"
                 },
                 "saksansvarlig": {
                     "type": "string"
@@ -112,54 +76,16 @@
                     "type": "object"
                 },
                 "referanseForelderMappeEksternNoekkel": {
-                    "type": "object",
-                    "properties": {
-                        "fagsystem": {
-                            "type": "string"
-                        },
-                        "noekkel": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "referanseForelderMappe": {
-                    "type": "string"
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "arkivSaksnummer": {
-                    "type": "object",
-                    "properties": {
-                        "saksaar": {
-                            "type": "integer"
-                        },
-                        "sakssekvensnummer": {
-                            "type": "integer"
-                        }
-                    }
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.saksnummer.schema.json"
                 },
                 "referanseRegistreringEksternNoekkel": {
-                    "type": "object",
-                    "properties": {
-                        "fagsystem": {
-                            "type": "string"
-                        },
-                        "noekkel": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "referanseRegistrering": {
-                    "type": "string"
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json"
                 },
                 "arkivJournalnummer": {
-                    "type": "object",
-                    "properties": {
-                        "journalaar": {
-                            "type": "integer"
-                        },
-                        "journalsekvensnummer": {
-                            "type": "integer"
-                        }
-                    }
+                    "$ref": "no.ks.fiks.politisk.behandling.v1.felles.journalnummer.schema.json"
                 },
                 "arkivJournalpostnummer": {
                     "type": "integer"

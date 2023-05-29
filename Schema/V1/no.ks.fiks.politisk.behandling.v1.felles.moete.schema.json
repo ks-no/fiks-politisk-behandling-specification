@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.politisk.behandling.v1.felles.moete.schema.json",
+    "title": "Moete",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "moeteid": {
+            "type": "string"
+        },
+        "moetedato": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "tittel": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "moeteid"
+    ]
+}

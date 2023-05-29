@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://no.ks.fiks.politisk.behandling.v1.einnsyn/moeteplan.send.schema.json",
+    "$id": "no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send.schema.json",
     "title": "SendMoeteplanEinnsyn",
     "definitions": {
         "Utvalg": {
@@ -15,7 +15,7 @@
                 "moete": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/Moete"
+                        "$ref": "no.ks.fiks.politisk.behandling.v1.felles.moete.schema.json"
                     }
                 },
                 "medlem": {
@@ -28,24 +28,6 @@
             "required": [
                 "utvalgId",
                 "utvalgNavn"
-            ]
-        },
-        "Moete": {
-            "type": "object",
-            "properties": {
-                "moeteid": {
-                    "type": "string"
-                },
-                "moetedato": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "tittel": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "moeteid"
             ]
         },
         "Utvalgsmedlem": {

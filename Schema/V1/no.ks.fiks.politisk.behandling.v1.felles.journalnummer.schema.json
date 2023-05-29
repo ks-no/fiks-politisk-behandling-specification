@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.politisk.behandling.v1.felles.journalnummer.schema.json",
+    "title": "Journalnummer",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "journalaar": {
+            "type": "integer"
+        },
+        "journalsekvensnummer": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "journalaar",
+        "journalsekvensnummer"
+    ]
+}

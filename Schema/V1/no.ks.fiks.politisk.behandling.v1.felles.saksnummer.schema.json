@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.politisk.behandling.v1.felles.saksnummer.schema.json",
+    "title": "Saksnummer",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "saksaar": {
+            "type": "integer"
+        },
+        "sakssekvensnummer": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "saksaar",
+        "sakssekvensnummer"
+    ]
+}

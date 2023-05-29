@@ -1,0 +1,207 @@
+{
+  "protokollnavn": "no.ks.fiks.politisk.behandling",
+  "versjon": "v1",
+  "meldingstyper": [
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.delegertvedtak.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.delegertvedtak.send.mottatt", "no.ks.fiks.politisk.behandling.v1.delegertvedtak.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.delegertvedtak.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.delegertvedtak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.delegertvedtak.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.delegertvedtak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send.mottatt", "no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.moeteplan.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send.mottatt", "no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.utvalgssaker.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.mottatt", "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.mottatt", "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.moeteplan.hent",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.moeteplan.hent.resultat", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.moeteplan.hent.resultat",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.moeteplan.hent"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.orienteringssak.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.orienteringssak.send.mottatt", "no.ks.fiks.politisk.behandling.v1.orienteringssak.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.orienteringssak.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.orienteringssak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.orienteringssak.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.orienteringssak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.utvalg.hent",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.utvalg.hent.resultat", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.utvalg.hent.resultat",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.utvalg.hent"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.utvalgssak.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.utvalgssak.send.mottatt", "no.ks.fiks.politisk.behandling.v1.utvalgssak.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.utvalgssak.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.utvalgssak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.utvalgssak.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.utvalgssak.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "payload.json",
+      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send.mottatt", "no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send.mottatt",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send.kvittering",
+      "beskrivelse": "",
+      "harPayload": false,
+      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.vedtakfrautvalg.send"]
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "feilmelding.json",
+      "erSvarPaa": []
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "feilmelding.json",
+      "erSvarPaa": []
+    },
+    {
+      "id": "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet",
+      "beskrivelse": "",
+      "harPayload": true,
+      "payloadFilnavn": "feilmelding.json",
+      "erSvarPaa": []
+    }
+  ]
+}

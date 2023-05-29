@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel.schema.json",
+    "title": "EksternNoekkel",
+    "definitions": {},
+    "type": "object",
+    "properties": {
+        "fagsystem": {
+            "type": "string"
+        },
+        "noekkel": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "fagsystem",
+        "noekkel"
+    ]
+}
