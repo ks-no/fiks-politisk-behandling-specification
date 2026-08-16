@@ -1,0 +1,14 @@
+@startuml
+class Beskrivelse {
+    +tekstInnhold: string
+    +tekstFormat: TekstFormat
+}
+
+Beskrivelse -- TekstFormat
+
+class TekstFormat <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+@enduml

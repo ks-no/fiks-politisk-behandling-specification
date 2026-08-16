@@ -80,25 +80,6 @@
       "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send"]
     },
     {
-      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send",
-      "beskrivelse": "",
-      "harPayload": true,
-      "payloadFilnavn": "payload.json",
-      "kanSvareMed": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.mottatt", "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.kvittering", "no.ks.fiks.politisk.behandling.v1.feilmelding.ugyldigforespoersel", "no.ks.fiks.politisk.behandling.v1.feilmelding.serverfeil", "no.ks.fiks.politisk.behandling.v1.feilmelding.ikkefunnet"]
-    },
-    {
-      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.mottatt",
-      "beskrivelse": "",
-      "harPayload": false,
-      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send"]
-    },
-    {
-      "id": "no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send.kvittering",
-      "beskrivelse": "",
-      "harPayload": false,
-      "erSvarPaa": ["no.ks.fiks.politisk.behandling.v1.einnsyn.vedtak.send"]
-    },
-    {
       "id": "no.ks.fiks.politisk.behandling.v1.moeteplan.hent",
       "beskrivelse": "",
       "harPayload": true,
