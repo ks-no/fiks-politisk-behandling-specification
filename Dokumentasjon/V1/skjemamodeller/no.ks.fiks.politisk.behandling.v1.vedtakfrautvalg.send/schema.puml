@@ -1,0 +1,66 @@
+@startuml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.saksnummer/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.beskrivelse/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.skjerming/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.journalnummer/schema.puml
+
+class SendVedtakFraUtvalg {
+    +utvalgId: string
+    +utvalgNavn: string
+    +moeteId: string
+    +moetedato: string
+    +erEndeligVedtak: boolean
+    +sak: Sak
+}
+
+SendVedtakFraUtvalg -- Sak
+
+class Sak {
+    +referanseEksternNoekkel: EksternNoekkel
+    +fagsystemetsSaksnummer: Saksnummer
+    +fagsystemetsReferanseEksternNoekkel: EksternNoekkel
+    +utvalgetsSaksnummer: Saksnummer
+    +tittel: string
+    +vedtaksdato: string
+    +status: Status
+    +vedtak: Beskrivelse
+    +skjerming: Skjerming
+    +saksansvarlig: string
+    +posisjon: object
+    +votering: Votering[]
+    +referanseForelderMappeEksternNoekkel: EksternNoekkel
+    +arkivSaksnummer: Saksnummer
+    +referanseRegistreringEksternNoekkel: EksternNoekkel
+    +arkivJournalnummer: Journalnummer
+    +arkivJournalpostnummer: integer
+}
+
+Sak -- EksternNoekkel
+Sak -- Saksnummer
+Sak -- Status
+Sak -- Beskrivelse
+Sak -- Skjerming
+Sak -- Journalnummer
+Sak -- Votering
+
+class Status <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+class Votering {
+    +moetedeltaker: string
+    +representerer: string
+    +stemme: Stemme
+}
+
+Votering -- Stemme
+
+class Stemme {
+    +Ja: object
+    +Nei: object
+    +Blankt: object
+}
+
+@enduml

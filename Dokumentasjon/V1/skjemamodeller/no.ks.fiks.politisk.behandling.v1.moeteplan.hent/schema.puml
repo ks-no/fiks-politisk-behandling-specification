@@ -1,0 +1,9 @@
+@startuml
+class HentMoeteplan {
+    +utvalgId: string
+    +utvalgNavn: string
+    +fraMoetedato: string
+    +tilMoetedato: string
+}
+
+@enduml

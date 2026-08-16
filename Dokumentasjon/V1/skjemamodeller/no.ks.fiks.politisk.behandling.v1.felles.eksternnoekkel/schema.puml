@@ -1,0 +1,7 @@
+@startuml
+class EksternNoekkel {
+    +fagsystem: string
+    +noekkel: string
+}
+
+@enduml

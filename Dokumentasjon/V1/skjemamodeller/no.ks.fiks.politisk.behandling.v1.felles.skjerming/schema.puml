@@ -1,0 +1,16 @@
+@startuml
+class Skjerming {
+    +skjermingshjemmel: string
+    +skjermingsvarighet: integer
+    +skjermingOpphoererDato: string
+    +tilgangsrestriksjon: Tilgangsrestriksjon
+}
+
+Skjerming -- Tilgangsrestriksjon
+
+class Tilgangsrestriksjon <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.moete/schema.puml
+
+class SendMoeteplanEinnsyn {
+    +avsender: Avsender
+    +utvalg: Utvalg[]
+}
+
+SendMoeteplanEinnsyn -- Avsender
+SendMoeteplanEinnsyn -- Utvalg
+
+class Avsender {
+    +organisasjonsnummer: string
+    +kommunenummer: string
+    +navn: string
+}
+
+class Utvalg {
+    +utvalgId: string
+    +utvalgNavn: string
+    +moete: Moete[]
+    +medlem: Utvalgsmedlem[]
+}
+
+Utvalg -- Moete
+Utvalg -- Utvalgsmedlem
+
+class Utvalgsmedlem {
+    +medlemsId: string
+    +navn: string
+    +rekkefoelge: integer
+    +representerer: string
+    +funksjon: string
+    +fraDato: string
+    +tilDato: string
+    +epost: string
+}
+
+@enduml

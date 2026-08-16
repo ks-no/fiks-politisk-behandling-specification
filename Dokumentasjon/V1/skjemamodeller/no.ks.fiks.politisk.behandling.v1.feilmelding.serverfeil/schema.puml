@@ -1,0 +1,8 @@
+@startuml
+class serverfeil {
+    +errorId: string
+    +feilmelding: string
+    +correlationId: string
+}
+
+@enduml

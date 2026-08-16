@@ -1,0 +1,47 @@
+@startuml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.saksnummer/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.beskrivelse/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.skjerming/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.journalnummer/schema.puml
+
+class SendUtvalgssak {
+    +sak: Sak
+    +forslagTilBehandlingsplan: Behandlingsplan[]
+}
+
+SendUtvalgssak -- Sak
+SendUtvalgssak -- Behandlingsplan
+
+class Sak {
+    +referanseEksternNoekkel: EksternNoekkel
+    +fagsystemetsSaksnummer: Saksnummer
+    +fagsystemetsReferanseEksternNoekkel: EksternNoekkel
+    +tittel: string
+    +saksbeskrivelse: Beskrivelse
+    +forslagTilVedtak: Beskrivelse
+    +skjerming: Skjerming
+    +saksansvarlig: string
+    +posisjon: object
+    +referanseForelderMappeEksternNoekkel: EksternNoekkel
+    +arkivSaksnummer: Saksnummer
+    +referanseRegistreringEksternNoekkel: EksternNoekkel
+    +arkivJournalnummer: Journalnummer
+    +arkivJournalpostnummer: integer
+}
+
+Sak -- EksternNoekkel
+Sak -- Saksnummer
+Sak -- Beskrivelse
+Sak -- Skjerming
+Sak -- Journalnummer
+
+class Behandlingsplan {
+    +tilUtvalgId: string
+    +tilUtvalgNavn: string
+    +tilMoeteId: string
+    +tilMoetedato: string
+    +rekkefoelge: integer
+}
+
+@enduml
