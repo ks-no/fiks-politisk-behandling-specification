@@ -1,0 +1,8 @@
+@startuml
+class Moete {
+    +moeteid: string
+    +moetedato: string
+    +tittel: string
+}
+
+@enduml

@@ -1,0 +1,86 @@
+@startuml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.saksnummer/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.beskrivelse/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.skjerming/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.moete/schema.puml
+
+class SendVedtakEinnsyn {
+    +moete: Moete
+    +utvalg: Utvalg
+    +avsender: Avsender
+    +vedtak: VedtakFraUtvalgeinnsyn[]
+}
+
+SendVedtakEinnsyn -- Moete
+SendVedtakEinnsyn -- Utvalg
+SendVedtakEinnsyn -- Avsender
+SendVedtakEinnsyn -- VedtakFraUtvalgeinnsyn
+
+class Utvalg {
+    +utvalgId: string
+    +utvalgNavn: string
+    +moete: Moete[]
+    +medlem: Utvalgsmedlem[]
+}
+
+Utvalg -- Utvalgsmedlem
+
+class Avsender {
+    +organisasjonsnummer: string
+    +kommunenummer: string
+    +navn: string
+}
+
+class VedtakFraUtvalgeinnsyn {
+    +referanseEksternNoekkel: EksternNoekkel
+    +utvalgetsSaksnummer: Saksnummer
+    +arkivetsSaksnummer: Saksnummer
+    +tittel: string
+    +vedtaksdato: string
+    +status: Status
+    +vedtak: Beskrivelse
+    +skjerming: Skjerming
+    +saksansvarlig: string
+    +posisjon: object
+    +votering: Votering[]
+}
+
+VedtakFraUtvalgeinnsyn -- EksternNoekkel
+VedtakFraUtvalgeinnsyn -- Saksnummer
+VedtakFraUtvalgeinnsyn -- Status
+VedtakFraUtvalgeinnsyn -- Beskrivelse
+VedtakFraUtvalgeinnsyn -- Skjerming
+VedtakFraUtvalgeinnsyn -- Votering
+
+class Status <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+class Utvalgsmedlem {
+    +medlemsId: string
+    +navn: string
+    +rekkefoelge: integer
+    +representerer: string
+    +funksjon: string
+    +fraDato: string
+    +tilDato: string
+    +epost: string
+}
+
+class Votering {
+    +moetedeltaker: string
+    +representerer: string
+    +stemme: Stemme
+}
+
+Votering -- Stemme
+
+class Stemme {
+    +Ja: object
+    +Nei: object
+    +Blankt: object
+}
+
+@enduml

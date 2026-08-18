@@ -1,0 +1,8 @@
+@startuml
+class ugyldigforespoersel {
+    +errorId: string
+    +feilmelding: string
+    +correlationId: string
+}
+
+@enduml

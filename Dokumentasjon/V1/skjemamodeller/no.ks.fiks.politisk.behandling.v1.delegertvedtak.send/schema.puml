@@ -1,0 +1,46 @@
+@startuml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.eksternnoekkel/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.saksnummer/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.beskrivelse/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.skjerming/schema.puml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.journalnummer/schema.puml
+
+class SendDelegertVedtak {
+    +tilUtvalgId: string
+    +tilUtvalgNavn: string
+    +sak: Sak
+}
+
+SendDelegertVedtak -- Sak
+
+class Sak {
+    +referanseEksternNoekkel: EksternNoekkel
+    +fagsystemetsReferanseEksternNoekkel: EksternNoekkel
+    +utvalgetsSaksnummer: Saksnummer
+    +tittel: string
+    +vedtaksdato: string
+    +status: Status
+    +vedtak: Beskrivelse
+    +skjerming: Skjerming
+    +saksansvarlig: string
+    +posisjon: object
+    +referanseForelderMappeEksternNoekkel: EksternNoekkel
+    +arkivSaksnummer: Saksnummer
+    +referanseRegistreringEksternNoekkel: EksternNoekkel
+    +arkivJournalnummer: Journalnummer
+    +arkivJournalpostnummer: integer
+}
+
+Sak -- EksternNoekkel
+Sak -- Saksnummer
+Sak -- Beskrivelse
+Sak -- Skjerming
+Sak -- Journalnummer
+Sak -- Status
+
+class Status <<Kode>> {
+    +kodeverdi: string
+    +kodebeskrivelse: string
+}
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+class ResultatUtvalg {
+    +utvalg: Utvalg[]
+}
+
+ResultatUtvalg -- Utvalg
+
+class Utvalg {
+    +utvalgId: string
+    +utvalgNavn: string
+}
+
+@enduml

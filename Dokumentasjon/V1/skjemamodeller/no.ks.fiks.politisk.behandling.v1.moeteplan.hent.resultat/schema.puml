@@ -1,0 +1,18 @@
+@startuml
+!include ../no.ks.fiks.politisk.behandling.v1.felles.moete/schema.puml
+
+class ResultatMoeteplan {
+    +utvalg: Utvalg[]
+}
+
+ResultatMoeteplan -- Utvalg
+
+class Utvalg {
+    +utvalgId: string
+    +utvalgNavn: string
+    +moete: Moete[]
+}
+
+Utvalg -- Moete
+
+@enduml
